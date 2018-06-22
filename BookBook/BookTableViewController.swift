@@ -42,18 +42,14 @@ class BookTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueReusableCell(withIdentifier: "Book Cell", for: indexPath)  // Configure the cell...
-        
-       
-        
-        //var nameDisplay: String = ""
-        //  var imageDisplay: String = ""
-       //  var cateDisplay: String = ""
-        //var impoDisplay: String = ""
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Book Cell", for: indexPath) as! BookTableViewCell
         
         
         let book = fetchedArray[indexPath.row]
-        cell.textLabel?.text = book.name
+       
+        cell.labelBookTitle.text = book.name
+        cell.labelCategory.text = book.category
+        cell.labelImportance.text = book.importance
         
    
         
@@ -71,7 +67,7 @@ class BookTableViewController: UITableViewController {
          
        //  cell.textLabel?.text = nameDisplay
         //cell.imageLabel? = book.image
-         cell.detailTextLabel?.text = book.category
+        // cell.detailTextLabel?.text = book.category
          //cell.impoLabel?.text = book.importance
  
  
@@ -106,7 +102,11 @@ class BookTableViewController: UITableViewController {
     func downloadDataFromServer() -> Void {
         let urlString: String = "http://condi.swu.ac.kr/student/T10iphone/booklist/bookTable.php"
         guard let requestURL = URL(string: urlString) else { return }
-        let request = URLRequest(url: requestURL)
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = "POST"
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let restString: String = "id=" + delegate.ID!
+        request.httpBody = restString.data(using: .utf8)
         
         let session = URLSession.shared
         let task = session.dataTask(with: request) { (responseData, response, responseError) in
@@ -115,6 +115,7 @@ class BookTableViewController: UITableViewController {
             let response = response as! HTTPURLResponse
             
             if !(200...299 ~= response.statusCode) { print("HTTP response Error!"); return }
+        
             do {
                 if let jsonData = try JSONSerialization.jsonObject(with: receivedData, options:.allowFragments) as? [[String: Any]] {
                     for i in 0...jsonData.count-1 {
@@ -128,6 +129,7 @@ class BookTableViewController: UITableViewController {
                         newData.writer = jsonElement["writer"] as! String
                         newData.pages = jsonElement["pages"] as! String
                         newData.date = jsonElement["date"]  as! String
+                        newData.importance = jsonElement["importance"] as! String
                         self.fetchedArray.append(newData)
                     }
                     DispatchQueue.main.async {
@@ -136,6 +138,7 @@ class BookTableViewController: UITableViewController {
                 }
             } catch {
                 print("Error:")
+                
             }
         }
         task.resume()
@@ -206,6 +209,10 @@ class BookTableViewController: UITableViewController {
      */
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-   
+    /* row의 높이 설정 */
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 152.0;
+    }
 
 }

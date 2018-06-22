@@ -304,14 +304,14 @@
         <scene sceneID="Ts7-UE-hYu">
             <objects>
                 <tableViewController id="bnL-Wq-M9E" customClass="BookTableViewController" customModule="BookBook" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="KGK-7O-aNm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KGK-7O-aNm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" red="0.37647058820000001" green="0.63921568630000003" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Book Cell" focusStyle="custom" rowHeight="152" id="bew-X8-Caz">
-                                <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="152"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Book Cell" rowHeight="152" id="bew-X8-Caz" customClass="BookTableViewCell" customModule="BookBook" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="152"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bew-X8-Caz" id="auz-Bc-s94">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="151.66666666666666"/>
@@ -349,10 +349,15 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.37647058820000001" green="0.63921568630000003" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="imgBook" destination="Aev-qp-dhJ" id="a7b-nI-f1I"/>
+                                    <outlet property="labelBookTitle" destination="ydR-Xr-N4B" id="T9U-ko-bCI"/>
+                                    <outlet property="labelCategory" destination="oT9-GB-dbU" id="Twa-to-H5n"/>
+                                    <outlet property="labelImportance" destination="EwQ-QK-0Z1" id="wtc-pE-3zr"/>
                                     <segue destination="BBD-yz-ZWV" kind="show" identifier="toDetailView" animates="NO" id="MWk-nm-2bL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="bnL-Wq-M9E" id="9uE-ih-Rcd"/>
                             <outlet property="delegate" destination="bnL-Wq-M9E" id="LzM-vt-1JS"/>
