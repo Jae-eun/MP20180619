@@ -41,6 +41,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDel
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.bookImage.image = image
+           
         }
         self.dismiss(animated: true, completion: nil)
     }
@@ -122,14 +123,14 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDel
         var request = URLRequest(url:myUrl!);
         request.httpMethod = "POST";
         let boundary = "Boundary-\(NSUUID().uuidString)"
-        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-        
+        request.setValue("multipart/form-data; boundary=\(boundary)",forHTTPHeaderField: "Content-Type")
         guard let imageData = UIImageJPEGRepresentation(myImage, 1) else { return }
         
         var body = Data()
         var dataString = "--\(boundary)\r\n"
-        dataString += "Content-Disposition: form-data; name=\"userfile\"; filename=\".jpg\"\r\n"
+        dataString += "Content-Disposition: form-data; name=\"userfile\";filename=\".jpg\"\r\n"
         dataString += "Content-Type: application/octet-stream\r\n\r\n"
+        
         if let data = dataString.data(using: .utf8) {
             body.append(data)
         }
@@ -180,6 +181,9 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDel
         restString += "&category=" + category
         restString += "&writer=" + writerName.text!  + "&importance=" + importance.text!
         restString += "&pages=" + bookPages.text! + "&date=" + myDate
+        
+        print(restString)
+        
         request.httpBody = restString.data(using: .utf8)
  
         let session2 = URLSession.shared

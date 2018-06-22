@@ -35,7 +35,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         
         var imageName = bookData.image
         if (imageName != "") {
-            let urlString = "http://condi.swu.ac.kr/student/T10iphone/booklist"
+            let urlString = "http://condi.swu.ac.kr/student/T10iphone/booklist/"
             imageName = urlString + imageName
             let url = URL(string: imageName)!
             if let imageData = try? Data(contentsOf: url) {
@@ -78,8 +78,22 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         } catch let error as NSError {
             print("Could not save \(error), \(error.userInfo)") }
         // 현재의 View를 없애고 이전 화면으로 복귀
-        self.navigationController?.popViewController(animated: true) }
+        self.navigationController?.popViewController(animated: true)
+        
+    }
     
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "toEditDetail" {
+            if let destination = segue.destination as? EditBookViewController
+            {
+                destination.selectedEditData = selectedData
+                destination.title = "책 상세정보 수정"
+            }
+            
+        }
+    }
 
 
 }

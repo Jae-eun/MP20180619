@@ -51,6 +51,16 @@ class BookTableViewController: UITableViewController {
         cell.labelCategory.text = book.category
         cell.labelImportance.text = book.importance
         
+        var imageName = book.image
+        if (imageName != ""){
+            let urlString = "http://condi.swu.ac.kr/student/T10iphone/booklist/"
+            imageName = urlString + imageName
+            print(imageName)
+            let url = URL(string: imageName)!
+            if let imageData = try? Data(contentsOf: url) {
+                cell.imgBook.image = UIImage(data: imageData)
+            }
+        }
    
         
     //    if let nameLabel = book.value(forKey: "name") as? String {
@@ -113,7 +123,8 @@ class BookTableViewController: UITableViewController {
             guard responseError == nil else { print("Error: calling POST"); return; }
             guard let receivedData = responseData else { print("Error: not receiving Data"); return; }
             let response = response as! HTTPURLResponse
-            
+            let responseString = String(data: receivedData, encoding: .utf8)
+            print(responseString)
             if !(200...299 ~= response.statusCode) { print("HTTP response Error!"); return }
         
             do {
@@ -121,7 +132,7 @@ class BookTableViewController: UITableViewController {
                     for i in 0...jsonData.count-1 {
                         let newData: BookData = BookData()
                         var jsonElement = jsonData[i]
-                     //   newData.bookno = jsonElement["bookno"] as! String
+                        newData.bookno = jsonElement["bookno"] as! String
                         newData.userid = jsonElement["userid"] as! String
                         newData.image = jsonElement["image"] as! String
                         newData.name = jsonElement["name"] as! String
@@ -131,6 +142,7 @@ class BookTableViewController: UITableViewController {
                         newData.date = jsonElement["date"]  as! String
                         newData.importance = jsonElement["importance"] as! String
                         self.fetchedArray.append(newData)
+                        
                     }
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
@@ -156,6 +168,7 @@ class BookTableViewController: UITableViewController {
                     let data = fetchedArray[selectedIndex]  // BookData 타입
                       destination.selectedData = data
                     destination.title = data.name
+//                    print(data.bookno)
                     
                 }
             }

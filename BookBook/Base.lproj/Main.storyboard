@@ -91,6 +91,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1kJ-hZ-yuB" id="GBQ-My-pD0"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebX-g4-geU">
                                 <rect key="frame" x="184" y="186" width="123" height="30"/>
@@ -99,6 +102,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1kJ-hZ-yuB" id="1b8-OZ-CLT"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w1A-z5-3Tq">
                                 <rect key="frame" x="184" y="310" width="123" height="30"/>
@@ -107,6 +113,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1kJ-hZ-yuB" id="ho8-dS-UXK"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sxb-ZP-oXn">
                                 <rect key="frame" x="184" y="368" width="123" height="30"/>
@@ -115,6 +124,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1kJ-hZ-yuB" id="l8V-kt-tGU"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호 재확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzb-Ym-YY4">
                                 <rect key="frame" x="63" y="373" width="113" height="19"/>
@@ -253,6 +265,9 @@
                                 <color key="textColor" red="0.039215686270000001" green="0.23921568630000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="a1Z-fh-YGs" id="FIw-zs-Sqv"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFw-fw-6WY">
                                 <rect key="frame" x="90" y="370" width="66" height="20"/>
@@ -268,6 +283,9 @@
                                 <color key="textColor" red="0.039215686270000001" green="0.23921568630000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                <connections>
+                                    <outlet property="delegate" destination="a1Z-fh-YGs" id="SMc-bN-Fed"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="로그인 상태" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JE2-sE-T1l">
                                 <rect key="frame" x="50" y="557" width="275" height="21"/>
@@ -317,7 +335,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="151.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aev-qp-dhJ">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aev-qp-dhJ">
                                             <rect key="frame" x="16" y="17" width="124" height="119"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -417,6 +435,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GeA-ox-7Kl" id="LT2-kN-TZP"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L7e-n4-GEi">
                                 <rect key="frame" x="150" y="567" width="160" height="30"/>
@@ -426,6 +447,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GeA-ox-7Kl" id="FCr-F6-w0c"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="페이지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y61-a1-k6s">
                                 <rect key="frame" x="71" y="674" width="47" height="19"/>
@@ -442,6 +466,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GeA-ox-7Kl" id="gqD-OX-AUG"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Opv-uA-6XD">
                                 <rect key="frame" x="71" y="521" width="62" height="19"/>
@@ -450,7 +477,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNo-rC-2jd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNo-rC-2jd">
                                 <rect key="frame" x="71" y="176" width="235" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.84264667821478223" green="1" blue="0.96292530200926529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -503,6 +530,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="GeA-ox-7Kl" id="R7s-le-mNj"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.37647058823529411" green="0.63921568627450975" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
@@ -592,7 +622,7 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Au-2k-vS0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Au-2k-vS0">
                                 <rect key="frame" x="67" y="152" width="240" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -659,7 +689,7 @@
                     <navigationItem key="navigationItem" title="상세 정보" id="Kfv-F4-Udg">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="QHr-uN-d1Q">
                             <connections>
-                                <segue destination="LOL-p0-wvm" kind="show" animates="NO" id="Idw-ks-hCs"/>
+                                <segue destination="LOL-p0-wvm" kind="show" identifier="toEditDetail" animates="NO" id="Idw-ks-hCs"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -681,7 +711,7 @@
         <!--정보 수정-->
         <scene sceneID="WeQ-CO-l4b">
             <objects>
-                <viewController id="LOL-p0-wvm" sceneMemberID="viewController">
+                <viewController id="LOL-p0-wvm" customClass="EditBookViewController" customModule="BookBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xyv-q5-9yt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -734,6 +764,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LOL-p0-wvm" id="ymR-LV-jUS"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FS9-Nk-F6B">
                                 <rect key="frame" x="161" y="578" width="150" height="30"/>
@@ -743,6 +776,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LOL-p0-wvm" id="0kz-GI-noJ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gao-CE-bae">
                                 <rect key="frame" x="161" y="629" width="150" height="30"/>
@@ -752,6 +788,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LOL-p0-wvm" id="vfP-ul-blL"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V6F-tc-GZx">
                                 <rect key="frame" x="161" y="683" width="150" height="30"/>
@@ -761,8 +800,11 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareRoundB" family="NanumSquareRound" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="LOL-p0-wvm" id="PbX-sv-q5q"/>
+                                </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRm-7i-6fG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KRm-7i-6fG">
                                 <rect key="frame" x="67" y="144" width="240" height="247"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -770,8 +812,8 @@
                                 <rect key="frame" x="161" y="519" width="160" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="GeA-ox-7Kl" id="oT4-FU-hbL"/>
-                                    <outlet property="delegate" destination="GeA-ox-7Kl" id="JTi-of-Dtb"/>
+                                    <outlet property="dataSource" destination="LOL-p0-wvm" id="PT7-co-3Xu"/>
+                                    <outlet property="delegate" destination="LOL-p0-wvm" id="TfK-Va-b6G"/>
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nut-tm-Knl">
@@ -782,6 +824,9 @@
                                 <state key="normal" title="카메라">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="LOL-p0-wvm" eventType="touchUpInside" id="lTe-tx-FM0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLF-IK-i00">
                                 <rect key="frame" x="217" y="414" width="56" height="31"/>
@@ -791,6 +836,9 @@
                                 <state key="normal" title="앨범">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectPicture:" destination="LOL-p0-wvm" eventType="touchUpInside" id="JJ1-I0-vgN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.37647058820000001" green="0.63921568630000003" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -799,6 +847,14 @@
                     <navigationItem key="navigationItem" title="정보 수정" id="bJF-wA-T4X">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="nPw-aa-3nf"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imgBook" destination="KRm-7i-6fG" id="3AG-4D-LPQ"/>
+                        <outlet property="pickerCate" destination="uHd-g8-MPn" id="WuG-hq-JMb"/>
+                        <outlet property="textImportance" destination="Gao-CE-bae" id="GXC-4z-2gF"/>
+                        <outlet property="textPage" destination="V6F-tc-GZx" id="0kC-I4-UVL"/>
+                        <outlet property="textTitle" destination="eyb-nY-WhI" id="miV-4S-9cN"/>
+                        <outlet property="textWriter" destination="FS9-Nk-F6B" id="Ed5-wd-lRe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfA-vo-2Of" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -18,5 +18,6 @@ class BookData: NSObject {
     var importance: String = ""
     var pages: String = ""
     var date: String = ""
+    var bookno: String = ""
 
 }
